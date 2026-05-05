@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, NavLink, useLocation, Link } from "react-router-dom";
-import {
-  Phone, Mail, MapPin, Menu, X, ChevronDown, Linkedin, Globe,
-  ArrowRight, ArrowLeft, FileText, ChevronUp,
-} from "lucide-react";
+import { Menu, X, Linkedin, Globe, FileText, ChevronUp } from "lucide-react";
 import { TikTokIcon, SnapchatIcon, XIcon, InstagramIcon } from "../components/Shared.jsx";
 import { translations } from "../data/translations.js";
 
@@ -80,10 +77,7 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className={`flex items-center justify-between gap-6 transition-all duration-300 ${scrolled ? "h-[72px]" : "h-[88px]"}`}>
           <div className="order-1 shrink-0 flex items-center">
-            <Link
-              to="/contact"
-              className="hidden md:inline-flex items-center justify-center bg-[#0a1628] hover:bg-[#152a52] text-white font-semibold text-[15px] px-7 py-3 rounded-md transition-all shadow-md hover:shadow-lg"
-            >
+            <Link to="/contact" className="hidden md:inline-flex items-center justify-center bg-[#0a1628] hover:bg-[#152a52] text-white font-semibold text-[15px] px-7 py-3 rounded-md transition-all shadow-md hover:shadow-lg">
               {t.nav.quote}
             </Link>
             <button onClick={onOpenMenu} className="md:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors" aria-label="Open menu">
@@ -98,16 +92,7 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
             </button>
             <nav className="flex items-center gap-0.5">
               {navItems.map((item) => (
-                <NavLink
-                  key={item.key}
-                  to={item.path}
-                  end={item.path === "/"}
-                  className={({ isActive }) =>
-                    `px-3 py-2 text-[15px] transition-colors whitespace-nowrap ${
-                      isActive ? "text-[#0a1628] font-bold" : "text-gray-700 hover:text-[#0a1628] font-medium"
-                    }`
-                  }
-                >
+                <NavLink key={item.key} to={item.path} end={item.path === "/"} className={({ isActive }) => `px-3 py-2 text-[15px] transition-colors whitespace-nowrap ${isActive ? "text-[#0a1628] font-bold" : "text-gray-700 hover:text-[#0a1628] font-medium"}`}>
                   {t.nav[item.key]}
                 </NavLink>
               ))}
@@ -139,15 +124,8 @@ function MobileDrawer({ open, onClose, t, lang, setLang }) {
 
   return (
     <>
-      <div
-        onClick={onClose}
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-      />
-      <aside
-        className={`fixed top-0 ${isRtl ? "right-0" : "left-0"} h-full w-[85%] max-w-sm bg-[#0a1628] z-50 shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
-          open ? "translate-x-0" : isRtl ? "translate-x-full" : "-translate-x-full"
-        }`}
-      >
+      <div onClick={onClose} className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0 pointer-events-none"}`} />
+      <aside className={`fixed top-0 ${isRtl ? "right-0" : "left-0"} h-full w-[85%] max-w-sm bg-[#0a1628] z-50 shadow-2xl transition-transform duration-300 ease-out flex flex-col ${open ? "translate-x-0" : isRtl ? "translate-x-full" : "-translate-x-full"}`}>
         <div className="flex items-center justify-between p-5 border-b border-white/10">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-md flex items-center justify-center overflow-hidden">
@@ -165,35 +143,18 @@ function MobileDrawer({ open, onClose, t, lang, setLang }) {
 
         <nav className="flex-1 overflow-y-auto py-4">
           {navItems.map((item) => (
-            <NavLink
-              key={item.key}
-              to={item.path}
-              end={item.path === "/"}
-              onClick={onClose}
-              className={({ isActive }) =>
-                `block px-5 py-3.5 transition-colors text-[15px] border-b border-white/5 ${
-                  isActive ? "bg-white/10 text-[#d4a737] font-bold" : "text-white/90 hover:bg-white/5 hover:text-[#d4a737]"
-                }`
-              }
-            >
+            <NavLink key={item.key} to={item.path} end={item.path === "/"} onClick={onClose} className={({ isActive }) => `block px-5 py-3.5 transition-colors text-[15px] border-b border-white/5 ${isActive ? "bg-white/10 text-[#d4a737] font-bold" : "text-white/90 hover:bg-white/5 hover:text-[#d4a737]"}`}>
               {t.nav[item.key]}
             </NavLink>
           ))}
         </nav>
 
         <div className="p-5 border-t border-white/10 space-y-3">
-          <Link
-            to="/contact"
-            onClick={onClose}
-            className="w-full inline-flex items-center justify-center gap-2 bg-[#d4a737] hover:bg-[#b8901f] text-white font-semibold py-3 rounded-md transition-colors"
-          >
+          <Link to="/contact" onClick={onClose} className="w-full inline-flex items-center justify-center gap-2 bg-[#d4a737] hover:bg-[#b8901f] text-white font-semibold py-3 rounded-md transition-colors">
             <FileText size={16} />
             {t.nav.quote}
           </Link>
-          <button
-            onClick={() => setLang(lang === "ar" ? "en" : "ar")}
-            className="w-full flex items-center justify-center gap-2 border border-white/20 text-white/90 py-2.5 rounded-md hover:bg-white/5 transition-colors text-sm"
-          >
+          <button onClick={() => setLang(lang === "ar" ? "en" : "ar")} className="w-full flex items-center justify-center gap-2 border border-white/20 text-white/90 py-2.5 rounded-md hover:bg-white/5 transition-colors text-sm">
             <Globe size={15} />
             {lang === "ar" ? "🇺🇸 English" : "🇸🇦 العربية"}
           </button>
@@ -269,12 +230,7 @@ function Footer({ t, lang }) {
             <h4 className="text-base font-bold mb-4 text-[#d4a737]">{t.footer.newsletter}</h4>
             <p className="text-xs text-white/60 mb-4">{t.footer.newsletterDesc}</p>
             <form onSubmit={(e) => e.preventDefault()} className="space-y-2">
-              <input
-                type="email"
-                placeholder={t.footer.newsletterPh}
-                dir="ltr"
-                className={`w-full px-4 py-2.5 bg-white/5 border border-white/10 focus:border-[#d4a737] rounded-md text-white placeholder:text-white/40 outline-none text-sm ${isRtl ? "text-right" : ""}`}
-              />
+              <input type="email" placeholder={t.footer.newsletterPh} dir="ltr" className={`w-full px-4 py-2.5 bg-white/5 border border-white/10 focus:border-[#d4a737] rounded-md text-white placeholder:text-white/40 outline-none text-sm ${isRtl ? "text-right" : ""}`} />
               <button type="submit" className="w-full bg-[#d4a737] hover:bg-[#b8901f] text-white font-bold py-2.5 rounded-md transition-colors text-sm">
                 {t.footer.subscribe}
               </button>
@@ -293,6 +249,7 @@ function Footer({ t, lang }) {
 
 function FloatingActions({ isRtl }) {
   const [showTop, setShowTop] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 500);
     window.addEventListener("scroll", onScroll);
@@ -302,21 +259,11 @@ function FloatingActions({ isRtl }) {
   return (
     <div className={`fixed bottom-6 ${isRtl ? "left-6" : "right-6"} z-50 flex flex-col gap-3`}>
       {showTop && (
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-12 h-12 bg-[#0a1628] hover:bg-[#152a52] text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110"
-          aria-label="Scroll to top"
-        >
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="w-12 h-12 bg-[#0a1628] hover:bg-[#152a52] text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110" aria-label="Scroll to top">
           <ChevronUp size={20} />
         </button>
       )}
-      
-        href="https://wa.me/966500317111"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-14 h-14 bg-[#25D366] hover:bg-[#1eb453] text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 relative"
-        aria-label="WhatsApp"
-      >
+      <a href="https://wa.me/966500317111" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#25D366] hover:bg-[#1eb453] text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
           <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c0-5.445 4.455-9.885 9.942-9.885a9.865 9.865 0 0 1 7.022 2.91 9.788 9.788 0 0 1 2.892 6.99c-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411" />
         </svg>
@@ -344,20 +291,14 @@ export default function MainLayout({ lang, setLang }) {
   }, [lang, t.dir]);
 
   return (
-    <div
-      dir={t.dir}
-      className="min-h-screen bg-white flex flex-col"
-      style={{ fontFamily: isRtl ? "'Tajawal', 'Segoe UI', system-ui, sans-serif" : "'Inter', 'Segoe UI', system-ui, sans-serif" }}
-    >
+    <div dir={t.dir} className="min-h-screen bg-white flex flex-col" style={{ fontFamily: isRtl ? "'Tajawal', 'Segoe UI', system-ui, sans-serif" : "'Inter', 'Segoe UI', system-ui, sans-serif" }}>
       <ScrollToTop />
       <TopBar t={t} />
       <MainHeader t={t} lang={lang} setLang={setLang} onOpenMenu={() => setMenuOpen(true)} />
       <MobileDrawer open={menuOpen} onClose={() => setMenuOpen(false)} t={t} lang={lang} setLang={setLang} />
-
       <main className="flex-1">
         <Outlet context={{ t, lang, isRtl }} />
       </main>
-
       <Footer t={t} lang={lang} />
       <FloatingActions isRtl={isRtl} />
     </div>
