@@ -4,6 +4,8 @@ import { Menu, X, Linkedin, Globe, FileText, ChevronUp } from "lucide-react";
 import { TikTokIcon, SnapchatIcon, XIcon, InstagramIcon } from "../components/Shared.jsx";
 import { translations } from "../data/translations.js";
 
+const LOGO_URL = "https://raw.githubusercontent.com/OBADI2030/qawayim-rawasi/main/public/logo.png";
+
 const navItems = [
   { key: "home", path: "/" },
   { key: "about", path: "/about" },
@@ -49,7 +51,7 @@ function TopBar({ t }) {
 function Logo() {
   return (
     <Link to="/" className="flex items-center hover:opacity-90 transition-opacity shrink-0">
-      <img src="/logo.png" alt="GAC - Gueim Al-Rowasi" className="h-12 w-auto object-contain" />
+      <img src={LOGO_URL} alt="GAC - Gueim Al-Rowasi" className="h-12 w-auto object-contain" />
     </Link>
   );
 }
@@ -121,7 +123,7 @@ function MobileDrawer({ open, onClose, t, lang, setLang }) {
         <div className="flex items-center justify-between p-5 border-b border-white/10">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-md flex items-center justify-center overflow-hidden bg-white/5">
-              <img src="/logo.png" alt="GAC Logo" className="w-full h-full object-contain" />
+              <img src={LOGO_URL} alt="GAC Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="text-white font-bold text-sm leading-tight">قوائم الرواسي</div>
@@ -175,7 +177,7 @@ function Footer({ t, lang }) {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-5 hover:opacity-90 transition-opacity">
               <div className="w-14 h-14 rounded-md flex items-center justify-center overflow-hidden bg-white/5">
-                <img src="/logo.png" alt="GAC Logo" className="w-full h-full object-contain" />
+                <img src={LOGO_URL} alt="GAC Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <div className="text-white font-bold text-base">{isRtl ? t.brand.line2 : t.brand.enFull}</div>
