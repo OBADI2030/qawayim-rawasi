@@ -54,7 +54,7 @@ function Logo({ t, isRtl }) {
           {isRtl ? t.brand.line2 : t.brand.enFull}
         </div>
       </div>
-      <div className="relative h-12 flex items-center justify-center">
+      <div className="relative h-12 w-32 flex items-center justify-center shrink-0">
         <img src="/logo.png" alt="QAC Logo" className="h-full w-auto object-contain" />
       </div>
     </Link>
