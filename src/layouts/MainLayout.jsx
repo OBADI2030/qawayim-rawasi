@@ -52,7 +52,7 @@ function TopBar({ t }) {
 }
 
 // ----------------------------------------------------
-//  LOGO
+//  LOGO  (✅ تم التعديل: استبدال SVG بصورة logo.png)
 // ----------------------------------------------------
 function Logo({ t, isRtl }) {
   return (
@@ -63,11 +63,8 @@ function Logo({ t, isRtl }) {
           {isRtl ? t.brand.line2 : t.brand.enFull}
         </div>
       </div>
-      <div className="relative w-12 h-12 bg-gradient-to-br from-[#0a1628] to-[#152a52] rounded-md flex items-center justify-center shadow-md">
-        <svg viewBox="0 0 32 32" className="w-7 h-7" fill="none">
-          <path d="M6 26V12L12 8V26H6Z" fill="#d4a737" />
-          <path d="M14 26V6L22 10V26H14Z" fill="#d4a737" opacity="0.85" />
-        </svg>
+      <div className="relative h-14 flex items-center justify-center">
+        <img src="/logo.png" alt="QAC Logo" className="h-full w-auto object-contain" />
       </div>
     </Link>
   );
@@ -142,7 +139,7 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
 }
 
 // ----------------------------------------------------
-//  MOBILE DRAWER
+//  MOBILE DRAWER  (✅ تم التعديل: استبدال QAC بصورة الشعار)
 // ----------------------------------------------------
 function MobileDrawer({ open, onClose, t, lang, setLang }) {
   const isRtl = lang === "ar";
@@ -167,8 +164,8 @@ function MobileDrawer({ open, onClose, t, lang, setLang }) {
       >
         <div className="flex items-center justify-between p-5 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white/10 rounded-md flex items-center justify-center">
-              <span className="text-[#d4a737] font-black text-base tracking-wider">QAC</span>
+            <div className="w-12 h-12 rounded-md flex items-center justify-center overflow-hidden">
+              <img src="/logo.png" alt="QAC Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="text-white font-bold text-sm leading-tight">قوائم الرواسي</div>
@@ -228,7 +225,7 @@ function MobileDrawer({ open, onClose, t, lang, setLang }) {
 }
 
 // ----------------------------------------------------
-//  FOOTER
+//  FOOTER  (✅ تم التعديل: استبدال QAC بصورة الشعار)
 // ----------------------------------------------------
 function Footer({ t, lang }) {
   const isRtl = lang === "ar";
@@ -241,8 +238,8 @@ function Footer({ t, lang }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-5 hover:opacity-90 transition-opacity">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#d4a737] to-[#b8901f] rounded-md flex items-center justify-center">
-                <span className="text-[#0a1628] font-black text-base tracking-wider">QAC</span>
+              <div className="w-14 h-14 rounded-md flex items-center justify-center overflow-hidden">
+                <img src="/logo.png" alt="QAC Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <div className="text-white font-bold text-base">{isRtl ? t.brand.line2 : t.brand.enFull}</div>
@@ -333,7 +330,7 @@ function FloatingActions({ isRtl }) {
           <ChevronUp size={20} />
         </button>
       )}
-      <a
+      
         href="https://wa.me/966500317111"
         target="_blank"
         rel="noopener noreferrer"
