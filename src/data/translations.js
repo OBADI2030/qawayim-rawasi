@@ -33,7 +33,7 @@ export const translations = {
   ar: {
     dir: "rtl",
     topBar: { contact: "هل تبحث عن معدة ؟ تواصل معنا :", phone: "+966500317111" },
-    brand: { line1: "QAC", line2: "شركة قوائم الرواسي للمقاولات", enFull: "Qawayim Al-Rawasi Contracting Co." },
+    brand: { line1: "GAC", line2: "شركة قوائم الرواسي للمقاولات", enFull: "Gueim Al-Rowasi For Contracting Co." },
     nav: {
       home: "الرئيسية",
       about: "من نحن",
@@ -286,7 +286,7 @@ export const translations = {
   en: {
     dir: "ltr",
     topBar: { contact: "Looking for equipment? Contact us:", phone: "+966500317111" },
-    brand: { line1: "QAC", line2: "Qawayim Al-Rawasi Contracting Co.", enFull: "Qawayim Al-Rawasi Contracting Co." },
+    brand: { line1: "GAC", line2: "Gueim Al-Rowasi For Contracting Co.", enFull: "Gueim Al-Rowasi For Contracting Co." },
     nav: {
       home: "Home",
       about: "About",
@@ -302,7 +302,7 @@ export const translations = {
     hero: {
       tag: "Saudi Vision 2030",
       title: "Integrated Solutions for Heavy Equipment",
-      subtitle: "Qawayim Al-Rawasi Contracting Co. — your trusted partner for major projects and infrastructure in Saudi Arabia.",
+      subtitle: "Gueim Al-Rowasi For Contracting Co. — your trusted partner for major projects and infrastructure in Saudi Arabia.",
       cta1: "Request a Quote",
       cta2: "View Our Work",
       since: "Serving the Kingdom for years",
@@ -316,10 +316,10 @@ export const translations = {
     },
     about: {
       pageTitle: "About Us",
-      pageSubtitle: "Learn about Qawayim Al-Rawasi Contracting Co.",
+      pageSubtitle: "Learn about Gueim Al-Rowasi For Contracting Co.",
       tag: "About Us",
-      title: "Qawayim Al-Rawasi Contracting Co.",
-      p1: "Qawayim Al-Rawasi was established as a fruit of reconstruction and development efforts in Saudi Arabia. We provide technical, consulting, and human services with specialized engineers at the highest level in the contracting sector.",
+      title: "Gueim Al-Rowasi For Contracting Co.",
+      p1: "Gueim Al-Rowasi was established as a fruit of reconstruction and development efforts in Saudi Arabia. We provide technical, consulting, and human services with specialized engineers at the highest level in the contracting sector.",
       p2: "We strive to be a leading local and international company in all our specialties through research and development.",
       cta: "Contact Us",
       points: [
@@ -391,7 +391,7 @@ export const translations = {
       partnersSubtitle: "We are proud of our partnerships",
       partnerLogos: ["Almabani", "BACS", "Bin Quraya", "Nesma", "Tasnim", "Al-Ayuni", "Source", "Al-Rawaf", "RTCC", "Saudi PAN", "Al-Halawi", "SPK Holding"],
       testimonials: [
-        { name: "Eng. Abdullah Al-Shamri", role: "Project Manager, Almabani", text: "We've worked with Qawayim Al-Rawasi on multiple projects. Their commitment to deadlines and high quality is consistently outstanding.", rating: 5, img: IMG.client1 },
+        { name: "Eng. Abdullah Al-Shamri", role: "Project Manager, Almabani", text: "We've worked with Gueim Al-Rowasi on multiple projects. Their commitment to deadlines and high quality is consistently outstanding.", rating: 5, img: IMG.client1 },
         { name: "Mr. Fahad Al-Otaibi", role: "CEO, Al-Rashid Group", text: "Modern fleet and professional team. Fast response and continuous support throughout the project.", rating: 5, img: IMG.client2 },
         { name: "Eng. Khalid Al-Anzi", role: "Consulting Engineer", text: "Technical expertise and high efficiency in executing complex projects. A real success partner.", rating: 5, img: IMG.client3 },
       ],
@@ -439,7 +439,7 @@ export const translations = {
     },
     why: {
       tag: "Why Us",
-      title: "Why Choose Qawayim Al-Rawasi?",
+      title: "Why Choose Gueim Al-Rowasi?",
       subtitle: "We are part of the renaissance of Saudi Arabia",
       items: [
         { title: "Deep Experience", desc: "Years of experience in construction projects." },
@@ -451,7 +451,7 @@ export const translations = {
       ],
     },
     footer: {
-      about: "Qawayim Al-Rawasi Contracting Co. is your trusted partner for heavy equipment rental in Saudi Arabia.",
+      about: "Gueim Al-Rowasi For Contracting Co. is your trusted partner for heavy equipment rental in Saudi Arabia.",
       quickLinks: "Quick Links",
       services: "Services",
       contactUs: "Contact Us",
