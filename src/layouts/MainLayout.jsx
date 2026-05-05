@@ -4,7 +4,7 @@ import {
   Phone, Mail, MapPin, Menu, X, ChevronDown, Linkedin, Globe,
   ArrowRight, ArrowLeft, FileText, ChevronUp,
 } from "lucide-react";
-import { TikTokIcon, SnapchatIcon, XIcon, InstagramIcon, SafeImg } from "../components/Shared.jsx";
+import { TikTokIcon, SnapchatIcon, XIcon, InstagramIcon } from "../components/Shared.jsx";
 import { translations } from "../data/translations.js";
 
 const navItems = [
@@ -18,9 +18,6 @@ const navItems = [
   { key: "contact", path: "/contact" },
 ];
 
-// ----------------------------------------------------
-//  TOP BAR
-// ----------------------------------------------------
 function TopBar({ t }) {
   const socials = [
     { Icon: TikTokIcon, label: "TikTok" },
@@ -51,9 +48,6 @@ function TopBar({ t }) {
   );
 }
 
-// ----------------------------------------------------
-//  LOGO  (✅ تم التعديل: استبدال SVG بصورة logo.png)
-// ----------------------------------------------------
 function Logo({ t, isRtl }) {
   return (
     <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
@@ -70,9 +64,6 @@ function Logo({ t, isRtl }) {
   );
 }
 
-// ----------------------------------------------------
-//  MAIN HEADER
-// ----------------------------------------------------
 function MainHeader({ t, lang, setLang, onOpenMenu }) {
   const isRtl = lang === "ar";
   const [scrolled, setScrolled] = useState(false);
@@ -88,7 +79,6 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
     <div className={`bg-white sticky top-0 z-40 transition-all duration-300 ${scrolled ? "shadow-lg border-b border-gray-100" : "border-b border-gray-100 shadow-sm"}`}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className={`flex items-center justify-between gap-6 transition-all duration-300 ${scrolled ? "h-[72px]" : "h-[88px]"}`}>
-          {/* Quote button - LEFT */}
           <div className="order-1 shrink-0 flex items-center">
             <Link
               to="/contact"
@@ -101,7 +91,6 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
             </button>
           </div>
 
-          {/* Center: lang + nav */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-1 justify-center">
             <button onClick={() => setLang(lang === "ar" ? "en" : "ar")} className="flex items-center gap-1.5 px-2.5 py-2 rounded-md hover:bg-gray-50 transition-colors text-[14px] font-semibold text-gray-700 shrink-0">
               <span className="tracking-wider">{lang === "ar" ? "EN" : "AR"}</span>
@@ -138,9 +127,6 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
   );
 }
 
-// ----------------------------------------------------
-//  MOBILE DRAWER  (✅ تم التعديل: استبدال QAC بصورة الشعار)
-// ----------------------------------------------------
 function MobileDrawer({ open, onClose, t, lang, setLang }) {
   const isRtl = lang === "ar";
 
@@ -224,9 +210,6 @@ function MobileDrawer({ open, onClose, t, lang, setLang }) {
   );
 }
 
-// ----------------------------------------------------
-//  FOOTER  (✅ تم التعديل: استبدال QAC بصورة الشعار)
-// ----------------------------------------------------
 function Footer({ t, lang }) {
   const isRtl = lang === "ar";
   const socials = [TikTokIcon, SnapchatIcon, Linkedin, XIcon, InstagramIcon];
@@ -308,9 +291,6 @@ function Footer({ t, lang }) {
   );
 }
 
-// ----------------------------------------------------
-//  FLOATING ACTIONS
-// ----------------------------------------------------
 function FloatingActions({ isRtl }) {
   const [showTop, setShowTop] = useState(false);
   useEffect(() => {
@@ -324,7 +304,7 @@ function FloatingActions({ isRtl }) {
       {showTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-12 h-12 bg-[#0a1628] hover:bg-[#152a52] text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 animate-fadeIn"
+          className="w-12 h-12 bg-[#0a1628] hover:bg-[#152a52] text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110"
           aria-label="Scroll to top"
         >
           <ChevronUp size={20} />
@@ -337,7 +317,6 @@ function FloatingActions({ isRtl }) {
         className="w-14 h-14 bg-[#25D366] hover:bg-[#1eb453] text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 relative"
         aria-label="WhatsApp"
       >
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping-soft opacity-50" />
         <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
           <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c0-5.445 4.455-9.885 9.942-9.885a9.865 9.865 0 0 1 7.022 2.91 9.788 9.788 0 0 1 2.892 6.99c-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411" />
         </svg>
@@ -346,9 +325,6 @@ function FloatingActions({ isRtl }) {
   );
 }
 
-// ----------------------------------------------------
-//  ScrollToTop on route change
-// ----------------------------------------------------
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -357,9 +333,6 @@ function ScrollToTop() {
   return null;
 }
 
-// ----------------------------------------------------
-//  MAIN LAYOUT
-// ----------------------------------------------------
 export default function MainLayout({ lang, setLang }) {
   const t = translations[lang];
   const isRtl = lang === "ar";
