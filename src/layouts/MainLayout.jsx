@@ -9,6 +9,7 @@ const navItems = [
   { key: "about", path: "/about" },
   { key: "services", path: "/services" },
   { key: "fleet", path: "/fleet" },
+  { key: "equipmentIndex", path: "/equipment-index" },
   { key: "projects", path: "/projects" },
   { key: "clients", path: "/clients" },
   { key: "certificates", path: "/certificates" },
@@ -84,7 +85,7 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
             </button>
             <nav className="flex items-center gap-0.5">
               {navItems.map((item) => (
-                <NavLink key={item.key} to={item.path} end={item.path === "/"} className={({ isActive }) => `px-3 py-2 text-[15px] transition-colors whitespace-nowrap ${isActive ? "text-[#0a1628] font-bold" : "text-gray-700 hover:text-[#0a1628] font-medium"}`}>
+                <NavLink key={item.key} to={item.path} end={item.path === "/"} className={({ isActive }) => `px-3 py-2 text-[14px] transition-colors whitespace-nowrap ${isActive ? "text-[#0a1628] font-bold" : "text-gray-700 hover:text-[#0a1628] font-medium"}`}>
                   {t.nav[item.key]}
                 </NavLink>
               ))}
