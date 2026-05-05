@@ -46,16 +46,15 @@ function TopBar({ t }) {
   );
 }
 
-function Logo({ t, isRtl }) {
+function Logo() {
   return (
     <Link to="/" className="flex items-center hover:opacity-90 transition-opacity shrink-0">
-      <img src="/logo.png" alt="QAC - قوائم الرواسي" className="h-14 w-auto object-contain" />
+      <img src="/logo.png" alt="GAC - Gueim Al-Rowasi" className="h-12 w-auto object-contain" />
     </Link>
   );
 }
 
 function MainHeader({ t, lang, setLang, onOpenMenu }) {
-  const isRtl = lang === "ar";
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -68,9 +67,9 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
   return (
     <div className={`bg-white sticky top-0 z-40 transition-all duration-300 ${scrolled ? "shadow-lg border-b border-gray-100" : "border-b border-gray-100 shadow-sm"}`}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
-        <div className={`flex items-center justify-between gap-6 transition-all duration-300 ${scrolled ? "h-[72px]" : "h-[88px]"}`}>
+        <div className={`flex items-center justify-between gap-4 transition-all duration-300 ${scrolled ? "h-[68px]" : "h-[80px]"}`}>
           <div className="order-1 shrink-0 flex items-center">
-            <Link to="/contact" className="hidden md:inline-flex items-center justify-center bg-[#0a1628] hover:bg-[#152a52] text-white font-semibold text-[15px] px-7 py-3 rounded-md transition-all shadow-md hover:shadow-lg">
+            <Link to="/contact" className="hidden md:inline-flex items-center justify-center bg-[#0a1628] hover:bg-[#152a52] text-white font-semibold text-[14px] px-5 py-2.5 rounded-md transition-all shadow-md hover:shadow-lg whitespace-nowrap">
               {t.nav.quote}
             </Link>
             <button onClick={onOpenMenu} className="md:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors" aria-label="Open menu">
@@ -78,14 +77,14 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
             </button>
           </div>
 
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-1 justify-center">
-            <button onClick={() => setLang(lang === "ar" ? "en" : "ar")} className="flex items-center gap-1.5 px-2.5 py-2 rounded-md hover:bg-gray-50 transition-colors text-[14px] font-semibold text-gray-700 shrink-0">
+          <div className="hidden lg:flex items-center gap-1 order-2 flex-1 justify-center min-w-0">
+            <button onClick={() => setLang(lang === "ar" ? "en" : "ar")} className="flex items-center gap-1 px-2 py-2 rounded-md hover:bg-gray-50 transition-colors text-[13px] font-semibold text-gray-700 shrink-0">
               <span className="tracking-wider">{lang === "ar" ? "EN" : "AR"}</span>
               <span className="text-base leading-none">{lang === "ar" ? "🇺🇸" : "🇸🇦"}</span>
             </button>
-            <nav className="flex items-center gap-0.5">
+            <nav className="flex items-center gap-0">
               {navItems.map((item) => (
-                <NavLink key={item.key} to={item.path} end={item.path === "/"} className={({ isActive }) => `px-3 py-2 text-[14px] transition-colors whitespace-nowrap ${isActive ? "text-[#0a1628] font-bold" : "text-gray-700 hover:text-[#0a1628] font-medium"}`}>
+                <NavLink key={item.key} to={item.path} end={item.path === "/"} className={({ isActive }) => `px-2.5 py-2 text-[13px] transition-colors whitespace-nowrap ${isActive ? "text-[#0a1628] font-bold" : "text-gray-700 hover:text-[#0a1628] font-medium"}`}>
                   {t.nav[item.key]}
                 </NavLink>
               ))}
@@ -97,7 +96,7 @@ function MainHeader({ t, lang, setLang, onOpenMenu }) {
           </button>
 
           <div className="order-3 shrink-0">
-            <Logo t={t} isRtl={isRtl} />
+            <Logo />
           </div>
         </div>
       </div>
@@ -121,12 +120,12 @@ function MobileDrawer({ open, onClose, t, lang, setLang }) {
       <aside className={`fixed top-0 ${isRtl ? "right-0" : "left-0"} h-full w-[85%] max-w-sm bg-[#0a1628] z-50 shadow-2xl transition-transform duration-300 ease-out flex flex-col ${open ? "translate-x-0" : isRtl ? "translate-x-full" : "-translate-x-full"}`}>
         <div className="flex items-center justify-between p-5 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-md flex items-center justify-center overflow-hidden">
-              <img src="/logo.png" alt="QAC Logo" className="w-full h-full object-contain" />
+            <div className="w-12 h-12 rounded-md flex items-center justify-center overflow-hidden bg-white/5">
+              <img src="/logo.png" alt="GAC Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="text-white font-bold text-sm leading-tight">قوائم الرواسي</div>
-              <div className="text-white/60 text-[11px] leading-tight mt-0.5">Qawayim Al-Rawasi</div>
+              <div className="text-white/60 text-[11px] leading-tight mt-0.5">Gueim Al-Rowasi</div>
             </div>
           </div>
           <button onClick={onClose} className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition-colors" aria-label="Close menu">
@@ -175,8 +174,8 @@ function Footer({ t, lang }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-5 hover:opacity-90 transition-opacity">
-              <div className="w-14 h-14 rounded-md flex items-center justify-center overflow-hidden">
-                <img src="/logo.png" alt="QAC Logo" className="w-full h-full object-contain" />
+              <div className="w-14 h-14 rounded-md flex items-center justify-center overflow-hidden bg-white/5">
+                <img src="/logo.png" alt="GAC Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <div className="text-white font-bold text-base">{isRtl ? t.brand.line2 : t.brand.enFull}</div>
@@ -233,7 +232,7 @@ function Footer({ t, lang }) {
 
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
           <div>{t.footer.rights}</div>
-          <div className="text-[#d4a737] font-semibold">www.alrawasi.com</div>
+          <div className="text-[#d4a737] font-semibold">www.alrowasi.com</div>
         </div>
       </div>
     </footer>
