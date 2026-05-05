@@ -1470,53 +1470,54 @@ function Contact({ t, lang }) {
               );
             })}
             {/* Real Google Maps - شركة قوائم الرواسي للمقاولات */}
-<div className="bg-white p-2 rounded-xl border border-gray-100 overflow-hidden shadow-sm">
-  <div className="aspect-[16/10] rounded-lg overflow-hidden relative">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.6!2d46.7266!3d24.6266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDM3JzM2LjAiTiA0NsKwNDMnMzUuOCJF!5e0!3m2!1sar!2ssa!4v1700000000000"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="موقع شركة قوائم الرواسي للمقاولات"
-    ></iframe>
-    <div className={`absolute top-3 ${isRtl ? "right-3" : "left-3"} bg-white shadow-xl rounded-lg px-3 py-2.5 flex items-center gap-2 max-w-[200px]`}>
-      <div className="w-9 h-9 bg-[#d4a737] rounded-full flex items-center justify-center shrink-0">
-        <MapPin size={16} className="text-white" />
-      </div>
-      <div className="min-w-0">
-        <div className="text-[#0a1628] font-bold text-xs truncate">
-          {isRtl ? "قوائم الرواسي" : "Qawayim Al-Rawasi"}
-        </div>
-        <div className="text-gray-500 text-[10px]">
-          {isRtl ? "بدر، الرياض" : "Badr, Riyadh"}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="grid grid-cols-2 gap-2 mt-2">
-    
-      href="https://www.google.com/maps/dir/?api=1&destination=GPJ9%2B76+Badr+Riyadh"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center gap-2 px-3 py-2.5 bg-[#0a1628] hover:bg-[#152a52] text-white rounded-lg transition-colors text-sm font-semibold"
-    >
-      <MapPin size={16} />
-      <span>{isRtl ? "الاتجاهات" : "Directions"}</span>
-    </a>
-    
-      href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%B3%D9%8A+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center gap-2 px-3 py-2.5 bg-gray-100 hover:bg-gray-200 text-[#0a1628] rounded-lg transition-colors text-sm font-semibold"
-    >
-      <Globe size={16} className="text-[#d4a737]" />
-      <span>{isRtl ? "افتح الخريطة" : "Open Map"}</span>
-    </a>
-  </div>
-</div>
+            <div className="bg-white p-2 rounded-xl border border-gray-100 overflow-hidden shadow-sm">
+              <div className="aspect-[16/10] rounded-lg overflow-hidden relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.6!2d46.7266!3d24.6266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDM3JzM2LjAiTiA0NsKwNDMnMzUuOCJF!5e0!3m2!1sar!2ssa!4v1700000000000"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="موقع شركة قوائم الرواسي للمقاولات"
+                ></iframe>
+                <div className={`absolute top-3 ${isRtl ? "right-3" : "left-3"} bg-white shadow-xl rounded-lg px-3 py-2.5 flex items-center gap-2 max-w-[200px]`}>
+                  <div className="w-9 h-9 bg-[#d4a737] rounded-full flex items-center justify-center shrink-0">
+                    <MapPin size={16} className="text-white" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[#0a1628] font-bold text-xs truncate">
+                      {isRtl ? "قوائم الرواسي" : "Qawayim Al-Rawasi"}
+                    </div>
+                    <div className="text-gray-500 text-[10px]">
+                      {isRtl ? "بدر، الرياض" : "Badr, Riyadh"}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2 mt-2">
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=GPJ9%2B76+Badr+Riyadh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-3 py-2.5 bg-[#0a1628] hover:bg-[#152a52] text-white rounded-lg transition-colors text-sm font-semibold"
+                >
+                  <MapPin size={16} />
+                  <span>{isRtl ? "الاتجاهات" : "Directions"}</span>
+                </a>
+                <a
+                  href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%B3%D9%8A+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-3 py-2.5 bg-gray-100 hover:bg-gray-200 text-[#0a1628] rounded-lg transition-colors text-sm font-semibold"
+                >
+                  <Globe size={16} className="text-[#d4a737]" />
+                  <span>{isRtl ? "افتح الخريطة" : "Open Map"}</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
           {/* Form (3 cols) */}
           <div className="lg:col-span-3 bg-white p-8 lg:p-10 rounded-2xl shadow-xl border border-gray-100">
