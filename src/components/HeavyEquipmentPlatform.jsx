@@ -43,18 +43,21 @@ import {
 const IMG = {
   // Hero / construction sites
   hero: "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  hero2: "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  hero2: "https://images.pexels.com/photos/2078884/pexels-photo-2078884.jpeg?auto=compress&cs=tinysrgb&w=1600",
   hero3: "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  // Equipment
+  // Real equipment photos - all verified
   excavator: "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
-  bulldozer: "https://images.pexels.com/photos/2138922/pexels-photo-2138922.jpeg?auto=compress&cs=tinysrgb&w=800",
-  loader: "https://images.pexels.com/photos/2058130/pexels-photo-2058130.jpeg?auto=compress&cs=tinysrgb&w=800",
-  crane: "https://images.pexels.com/photos/162539/architecture-building-amsterdam-blue-sky-162539.jpeg?auto=compress&cs=tinysrgb&w=800",
+  excavator2: "https://images.pexels.com/photos/210881/pexels-photo-210881.jpeg?auto=compress&cs=tinysrgb&w=800",
+  bulldozer: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800",
+  loader: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800",
+  crane: "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800",
   truck: "https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&w=800",
   paving: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800",
+  grader: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800",
+  forklift: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800",
   // Project / sites
   site1: "https://images.pexels.com/photos/2058136/pexels-photo-2058136.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  site2: "https://images.pexels.com/photos/162568/oil-pump-jack-sunset-clouds-silhouette-162568.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  site2: "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1200",
   site3: "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1200",
   workers: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200",
   city: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -286,6 +289,72 @@ const translations = {
       ],
       viewAll: "عرض كل المعدات",
     },
+    fleetDetail: {
+      tag: "تفاصيل أسطولنا",
+      title: "كل المعدات بالتفصيل",
+      subtitle: "تعرف على أنواع المعدات الثقيلة المتوفرة لدينا للإيجار اليومي والشهري",
+      items: [
+        {
+          name: "الحفارات (Excavators)",
+          img: IMG.excavator,
+          count: "+45 حفارة",
+          features: ["كاتربيلر CAT", "كوماتسو", "هيونداي", "أحجام من 5 إلى 50 طن"],
+          uses: "للحفر العميق، إزالة التربة، تحميل الشاحنات، هدم المباني، وأعمال البنية التحتية.",
+        },
+        {
+          name: "البلدوزرات (Bulldozers)",
+          img: IMG.bulldozer,
+          count: "+30 بلدوزر",
+          features: ["كاتربيلر D6/D8/D10", "كوماتسو D85", "تروس مجنزرة", "قوة 200-580 حصان"],
+          uses: "لتسوية الأراضي، دفع التربة والأنقاض، تمهيد الطرق، إزالة العوائق.",
+        },
+        {
+          name: "الشيولات (Wheel Loaders)",
+          img: IMG.loader,
+          count: "+25 شيول",
+          features: ["كاتربيلر 950/966", "فولفو L120", "JCB", "حمولة من 2 إلى 10 أمتار مكعبة"],
+          uses: "للتحميل السريع للشاحنات، نقل المواد داخل المواقع، خلط الخرسانة، أعمال المحاجر.",
+        },
+        {
+          name: "الكرينات (Cranes)",
+          img: IMG.crane,
+          count: "+20 كرين",
+          features: ["كرينات برجية", "كرينات متحركة", "حمولات من 25 إلى 200 طن", "ارتفاعات تصل لـ 80م"],
+          uses: "لرفع الأحمال الثقيلة، تركيب الهياكل المعدنية، أعمال البناء العالي، تركيب المعدات.",
+        },
+        {
+          name: "الشاحنات والقلابات (Trucks)",
+          img: IMG.truck,
+          count: "+60 شاحنة",
+          features: ["مرسيدس أكتروس", "فولفو FH", "MAN TGS", "حمولات من 25 إلى 40 طن"],
+          uses: "لنقل التربة والركام، توصيل الخرسانة، نقل المواد البنائية، تفريغ المخلفات.",
+        },
+        {
+          name: "رصاصات ومداحل الطرق",
+          img: IMG.paving,
+          count: "+15 رصاصة",
+          features: ["مداحل اهتزازية", "رصاصات إطار مطاطي", "Bomag", "Hamm", "وزن من 5 إلى 25 طن"],
+          uses: "لرص الأسفلت، ضغط التربة، إنشاء الطرق، أعمال الرصف النهائية.",
+        },
+        {
+          name: "الجريدرات (Graders)",
+          img: IMG.grader,
+          count: "+10 جريدر",
+          features: ["كاتربيلر 140/160", "كوماتسو GD675", "نصل بطول 3.7-4.3م", "دقة عالية في التسوية"],
+          uses: "لتسوية الأراضي بدقة، تمهيد الطرق، تنظيف المواقع، تشكيل الميلانات.",
+        },
+        {
+          name: "الرافعات الشوكية (Forklifts)",
+          img: IMG.forklift,
+          count: "+15 رافعة",
+          features: ["تويوتا", "هيستر", "حمولات من 3 إلى 25 طن", "ارتفاعات حتى 12م"],
+          uses: "لرفع ونقل المواد داخل المستودعات والمواقع، تحميل الحاويات، أعمال اللوجستيات.",
+        },
+      ],
+      cta: "اطلب تسعيرة للمعدات",
+      featuresTitle: "المواصفات",
+      usesTitle: "الاستخدامات",
+    },
     why: {
       tag: "لماذا نحن",
       title: "لماذا تختار قوائم الرواسي ؟",
@@ -484,6 +553,72 @@ const translations = {
         { name: "Road Rollers", img: IMG.paving, count: "+15", desc: "Asphalt work" },
       ],
       viewAll: "View All Equipment",
+    },
+    fleetDetail: {
+      tag: "Fleet Details",
+      title: "All Equipment in Detail",
+      subtitle: "Discover the heavy equipment we offer for daily and monthly rental",
+      items: [
+        {
+          name: "Excavators",
+          img: IMG.excavator,
+          count: "+45 Units",
+          features: ["Caterpillar CAT", "Komatsu", "Hyundai", "5 to 50 ton capacity"],
+          uses: "Deep excavation, soil removal, truck loading, building demolition, infrastructure work.",
+        },
+        {
+          name: "Bulldozers",
+          img: IMG.bulldozer,
+          count: "+30 Units",
+          features: ["Caterpillar D6/D8/D10", "Komatsu D85", "Track-mounted", "200-580 HP"],
+          uses: "Land leveling, pushing soil and debris, road preparation, obstacle removal.",
+        },
+        {
+          name: "Wheel Loaders",
+          img: IMG.loader,
+          count: "+25 Units",
+          features: ["Caterpillar 950/966", "Volvo L120", "JCB", "2 to 10 cubic meters"],
+          uses: "Quick truck loading, material transport on sites, concrete mixing, quarry work.",
+        },
+        {
+          name: "Cranes",
+          img: IMG.crane,
+          count: "+20 Units",
+          features: ["Tower cranes", "Mobile cranes", "25 to 200 ton capacity", "Heights up to 80m"],
+          uses: "Heavy load lifting, steel structure installation, high-rise construction, equipment installation.",
+        },
+        {
+          name: "Trucks & Dumpers",
+          img: IMG.truck,
+          count: "+60 Units",
+          features: ["Mercedes Actros", "Volvo FH", "MAN TGS", "25 to 40 ton capacity"],
+          uses: "Soil and aggregate transport, concrete delivery, building materials transport, debris disposal.",
+        },
+        {
+          name: "Road Rollers",
+          img: IMG.paving,
+          count: "+15 Units",
+          features: ["Vibratory rollers", "Pneumatic tyre rollers", "Bomag", "Hamm", "5 to 25 tons"],
+          uses: "Asphalt compaction, soil compression, road construction, final paving work.",
+        },
+        {
+          name: "Graders",
+          img: IMG.grader,
+          count: "+10 Units",
+          features: ["Caterpillar 140/160", "Komatsu GD675", "3.7-4.3m blade", "High-precision leveling"],
+          uses: "Precision land leveling, road preparation, site cleaning, slope shaping.",
+        },
+        {
+          name: "Forklifts",
+          img: IMG.forklift,
+          count: "+15 Units",
+          features: ["Toyota", "Hyster", "3 to 25 ton capacity", "Heights up to 12m"],
+          uses: "Material lifting and transport in warehouses and sites, container loading, logistics.",
+        },
+      ],
+      cta: "Request Equipment Quote",
+      featuresTitle: "Specifications",
+      usesTitle: "Applications",
     },
     why: {
       tag: "Why Us",
@@ -1201,8 +1336,99 @@ function Fleet({ t, lang }) {
           ))}
         </div>
         <div className="text-center mt-10">
-          <button onClick={() => scrollToSection("contact")} className="inline-flex items-center gap-2 bg-[#0a1628] hover:bg-[#152a52] text-white font-bold px-7 py-3.5 rounded-md transition-all shadow-md hover:shadow-xl group">
+          <button onClick={() => scrollToSection("fleet-detail")} className="inline-flex items-center gap-2 bg-[#0a1628] hover:bg-[#152a52] text-white font-bold px-7 py-3.5 rounded-md transition-all shadow-md hover:shadow-xl group">
             {t.fleet.viewAll}
+            <Arrow size={18} className="group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Fleet Detail — full equipment showcase                             */
+/* ------------------------------------------------------------------ */
+function FleetDetail({ t, lang }) {
+  const isRtl = lang === "ar";
+  const Arrow = isRtl ? ArrowLeft : ArrowRight;
+
+  return (
+    <section id="fleet-detail" className="bg-gradient-to-b from-white to-gray-50 py-20 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #d4a737 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+      <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+        <SectionHeading tag={t.fleetDetail.tag} title={t.fleetDetail.title} subtitle={t.fleetDetail.subtitle} />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {t.fleetDetail.items.map((item, i) => (
+            <div
+              key={i}
+              className="group bg-white rounded-2xl border border-gray-100 hover:border-[#d4a737] hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col md:flex-row"
+            >
+              {/* Image side */}
+              <div className="relative md:w-2/5 h-56 md:h-auto overflow-hidden shrink-0">
+                <SafeImg
+                  src={item.img}
+                  alt={item.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628]/70 via-transparent to-transparent" />
+                <div className={`absolute top-3 ${isRtl ? "right-3" : "left-3"} bg-[#d4a737] text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg`}>
+                  {item.count}
+                </div>
+              </div>
+
+              {/* Content side */}
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-bold text-[#0a1628] mb-3 group-hover:text-[#d4a737] transition-colors">
+                  {item.name}
+                </h3>
+
+                {/* Features list */}
+                <div className="mb-4">
+                  <div className="text-[11px] font-bold text-[#d4a737] uppercase tracking-wider mb-2">
+                    {t.fleetDetail.featuresTitle}
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {item.features.map((feature, fi) => (
+                      <span
+                        key={fi}
+                        className="text-[11px] bg-gray-100 text-gray-700 px-2.5 py-1 rounded-md font-medium"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Uses */}
+                <div className="mb-4 flex-1">
+                  <div className="text-[11px] font-bold text-[#d4a737] uppercase tracking-wider mb-1.5">
+                    {t.fleetDetail.usesTitle}
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.uses}</p>
+                </div>
+
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="inline-flex items-center gap-1 text-[#d4a737] hover:text-[#b8901f] text-sm font-bold transition-colors group/btn"
+                >
+                  {t.fleetDetail.cta}
+                  <Arrow size={14} className="group-hover/btn:translate-x-1 rtl:group-hover/btn:-translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-12 text-center">
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="inline-flex items-center gap-2 bg-[#d4a737] hover:bg-[#b8901f] text-white font-bold px-8 py-4 rounded-md transition-all shadow-lg hover:shadow-xl group"
+          >
+            <FileText size={18} />
+            {t.fleetDetail.cta}
             <Arrow size={18} className="group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
           </button>
         </div>
@@ -1748,6 +1974,7 @@ export default function HeavyEquipmentPlatform() {
       <About t={t} lang={lang} />
       <Services t={t} lang={lang} />
       <Fleet t={t} lang={lang} />
+      <FleetDetail t={t} lang={lang} />
       <WhyUs t={t} />
       <Projects t={t} lang={lang} />
       <Partners t={t} />
