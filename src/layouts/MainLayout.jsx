@@ -47,19 +47,12 @@ function TopBar({ t }) {
 
 function Logo({ t, isRtl }) {
   return (
-    <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
-      <div className={isRtl ? "text-right" : "text-left"}>
-        <div className="text-[#0a1628] font-black text-[18px] leading-tight tracking-wider">{t.brand.line1}</div>
-        <div className="text-gray-600 text-[11px] leading-tight mt-0.5 font-medium">
-          {isRtl ? t.brand.line2 : t.brand.enFull}
-        </div>
-      </div>
-      <div className="relative h-12 w-32 flex items-center justify-center shrink-0">
-        <img src="/logo.png" alt="QAC Logo" className="h-full w-auto object-contain" />
-      </div>
+    <Link to="/" className="flex items-center hover:opacity-90 transition-opacity shrink-0">
+      <img src="/logo.png" alt="QAC - قوائم الرواسي" className="h-14 w-auto object-contain" />
     </Link>
   );
 }
+
 function MainHeader({ t, lang, setLang, onOpenMenu }) {
   const isRtl = lang === "ar";
   const [scrolled, setScrolled] = useState(false);
