@@ -4,7 +4,7 @@ import { Menu, X, Linkedin, Globe, FileText, ChevronUp } from "lucide-react";
 import { TikTokIcon, SnapchatIcon, XIcon, InstagramIcon } from "../components/Shared.jsx";
 import { translations } from "../data/translations.js";
 
-const LOGO_URL = "https://cdn.statically.io/gh/OBADI2030/qawayim-rawasi/main/public/logo.png";
+const LOGO_URL = "https://i.imgur.com/N1WeQzP.png";
 
 const navItems = [
   { key: "home", path: "/" },
