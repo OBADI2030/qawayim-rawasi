@@ -60,7 +60,6 @@ function Logo({ t, isRtl }) {
     </Link>
   );
 }
-
 function MainHeader({ t, lang, setLang, onOpenMenu }) {
   const isRtl = lang === "ar";
   const [scrolled, setScrolled] = useState(false);
