@@ -5,15 +5,6 @@ import { IMG } from "../data/translations.js";
 import { SafeImg } from "../components/Shared.jsx";
 import PageHeader from "../components/PageHeader.jsx";
 
-const SERVICE_IDS = [
-  "heavy-equipment-rental",
-  "excavation-hauling",
-  "paving-asphalt",
-  "concrete-projects",
-  "demolition-projects",
-  "curbs-interlock",
-];
-
 export default function Services() {
   const { t, isRtl } = useOutletContext();
   const Arrow = isRtl ? ArrowLeft : ArrowRight;
@@ -26,7 +17,6 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.services.items.map((item, i) => {
               const Icon = icons[i] || Truck;
-              const serviceId = SERVICE_IDS[i] || `service-${i}`;
               return (
                 <div key={i} className="group bg-white rounded-2xl border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                   <div className="relative h-56 overflow-hidden">
@@ -42,7 +32,7 @@ export default function Services() {
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-[#0a1628] mb-3 group-hover:text-[#d4a737] transition-colors">{item.title}</h3>
                     <p className="text-sm text-gray-600 leading-relaxed mb-5">{item.desc}</p>
-                    <Link to={`/services/${serviceId}`} className="inline-flex items-center gap-1 text-[#d4a737] hover:text-[#b8901f] text-sm font-bold transition-colors group/btn">
+                    <Link to="/contact" className="inline-flex items-center gap-1 text-[#d4a737] hover:text-[#b8901f] text-sm font-bold transition-colors group/btn">
                       {t.services.readMore}
                       <Arrow size={14} className="group-hover/btn:translate-x-1 rtl:group-hover/btn:-translate-x-1 transition-transform" />
                     </Link>
