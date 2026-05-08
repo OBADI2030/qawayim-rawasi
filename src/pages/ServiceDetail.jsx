@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useParams, useOutletContext, Navigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, CheckCircle2, FileText, Phone, Star, Wrench, Award, Clock, Shield } from "lucide-react";
-import { IMG } from "../data/translations.js";
+import { ArrowLeft, ArrowRight, CheckCircle2, FileText, Phone, Star } from "lucide-react";
 import { SafeImg } from "../components/Shared.jsx";
 
 const SERVICE_IDS = [
@@ -32,17 +31,17 @@ const SERVICE_FEATURES_EN = [
 ];
 
 const STATS_AR = [
-  { icon: Award, label: "سنوات خبرة", value: "+15" },
-  { icon: CheckCircle2, label: "مشروع منجز", value: "+200" },
-  { icon: Clock, label: "دعم متواصل", value: "24/7" },
-  { icon: Shield, label: "ضمان الجودة", value: "100%" },
+  { label: "سنوات خبرة", value: "+15" },
+  { label: "مشروع منجز", value: "+200" },
+  { label: "دعم متواصل", value: "24/7" },
+  { label: "ضمان الجودة", value: "100%" },
 ];
 
 const STATS_EN = [
-  { icon: Award, label: "Years Experience", value: "+15" },
-  { icon: CheckCircle2, label: "Completed Projects", value: "+200" },
-  { icon: Clock, label: "Continuous Support", value: "24/7" },
-  { icon: Shield, label: "Quality Guarantee", value: "100%" },
+  { label: "Years Experience", value: "+15" },
+  { label: "Completed Projects", value: "+200" },
+  { label: "Continuous Support", value: "24/7" },
+  { label: "Quality Guarantee", value: "100%" },
 ];
 
 export default function ServiceDetail() {
@@ -102,18 +101,15 @@ export default function ServiceDetail() {
       <section className="bg-gradient-to-br from-[#0a1628] to-[#152a52] py-12 border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, i) => {
-              const Icon = stat.icon;
-              return (
-                <div key={i} className="text-center">
-                  <div className="w-14 h-14 mx-auto bg-[#d4a737]/20 rounded-full flex items-center justify-center mb-3">
-                    <Icon className="text-[#d4a737]" size={26} />
-                  </div>
-                  <div className="text-3xl lg:text-4xl font-black text-white mb-1">{stat.value}</div>
-                  <div className="text-white/70 text-sm">{stat.label}</div>
+            {stats.map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="w-14 h-14 mx-auto bg-[#d4a737]/20 rounded-full flex items-center justify-center mb-3">
+                  <CheckCircle2 className="text-[#d4a737]" size={26} />
                 </div>
-              );
-            })}
+                <div className="text-3xl lg:text-4xl font-black text-white mb-1">{stat.value}</div>
+                <div className="text-white/70 text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -147,17 +143,6 @@ export default function ServiceDetail() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <SafeImg src={service.img} alt={service.title} className="w-full h-[420px] object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a1628] to-transparent p-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-[#d4a737] rounded-lg flex items-center justify-center shadow-lg">
-                    <Wrench className="text-white" size={22} />
-                  </div>
-                  <div className="text-white">
-                    <div className="text-sm text-white/70">{isRtl ? "خدمة" : "Service"}</div>
-                    <div className="font-bold">{service.title}</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -171,7 +156,7 @@ export default function ServiceDetail() {
               {t.why.tag}
             </div>
             <h2 className="text-3xl lg:text-4xl font-black text-[#0a1628] mb-3">
-              {isRtl ? `لماذا نحن الخيار الأفضل لـ ${service.title}؟` : `Why Are We The Best For ${service.title}?`}
+              {isRtl ? "لماذا نحن الخيار الأفضل؟" : "Why Choose Us?"}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">{t.why.subtitle}</p>
           </div>
