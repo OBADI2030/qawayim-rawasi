@@ -10,7 +10,7 @@ export const IMG = {
   // Equipment Images - صور المعدات
   excavator: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1170&auto=format&fit=crop",
   bulldozer: "https://images.unsplash.com/photo-1629807473015-41699c4471b5?q=80&w=1170&auto=format&fit=crop",
-  loader: "https://images.unsplash.com/photo-1597844808871-c2c193b7e74a?q=80&w=1170&auto=format&fit=crop",
+  loader: "https://images.unsplash.com/photo-1597844808871-c2c193b7e74a",
   crane: "https://images.unsplash.com/photo-1565008576549-57569a49371d?q=80&w=1170&auto=format&fit=crop",
   truck: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1170&auto=format&fit=crop",
   paving: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?q=80&w=1170&auto=format&fit=crop",
