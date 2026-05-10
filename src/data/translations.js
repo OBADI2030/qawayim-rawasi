@@ -474,3 +474,4 @@ export const translations = {
     },
   },
 };
+
