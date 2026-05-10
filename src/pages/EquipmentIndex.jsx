@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
 import {
-  Truck, Construction, Forklift, Crane, Bus, Droplet,
+  Truck, Construction, Forklift, Bus, Droplet,
   Zap, Lightbulb, Search, ArrowLeft, ArrowRight,
 } from "lucide-react";
 
