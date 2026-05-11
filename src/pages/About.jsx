@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Target, Sparkles, Award, TrendingUp, Users, Building2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Target, Sparkles, Award, TrendingUp } from "lucide-react";
 import { IMG } from "../data/translations.js";
 import { SafeImg } from "../components/Shared.jsx";
 import PageHeader from "../components/PageHeader.jsx";
