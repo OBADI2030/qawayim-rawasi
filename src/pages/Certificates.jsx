@@ -1,12 +1,12 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
-import { Briefcase, CheckCircle2, Shield, Award } from "lucide-react";
+import { FileText, CheckCircle2, Shield, Award } from "lucide-react";
 import { IMG } from "../data/translations.js";
 import PageHeader from "../components/PageHeader.jsx";
 
 export default function Certificates() {
   const { t, isRtl } = useOutletContext();
-  const icons = [Briefcase, CheckCircle2, Shield, Award];
+  const icons = [FileText, CheckCircle2, Shield, Award];
   const colorMap = {
     blue: "bg-blue-500",
     emerald: "bg-emerald-500",
