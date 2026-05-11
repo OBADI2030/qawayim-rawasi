@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import {
-  Phone, Mail, MapPin, ArrowRight, ArrowLeft, FileText, Truck, Wrench, Users,
-  Building2, Award, CheckCircle2, Star, Calendar, Clock, Shield, Zap, Hammer,
+  Phone, ArrowRight, ArrowLeft, FileText, Truck, Users,
+  Award, CheckCircle2, Star, Clock, Shield, Zap, Hammer,
   Construction, PlayCircle, Quote, ChevronLeft, ChevronRight, Sparkles, Target,
-  TrendingUp, Briefcase,
+  TrendingUp,
 } from "lucide-react";
 import { IMG } from "../data/translations.js";
 import { SafeImg, SectionHeading, useReveal, Counter } from "../components/Shared.jsx";
@@ -187,7 +187,7 @@ function AboutPreview({ t, isRtl }) {
 // ====================================================================
 function ServicesPreview({ t, isRtl }) {
   const Arrow = isRtl ? ArrowLeft : ArrowRight;
-  const icons = [Truck, Hammer, Construction, Building2];
+  const icons = [Truck, Hammer, Construction, Hammer];
 
   return (
     <section className="bg-gray-50 py-20">
