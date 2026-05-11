@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Truck, Hammer, Construction, Building2, FileText } from "lucide-react";
+import { ArrowLeft, ArrowRight, Truck, Hammer, Construction, FileText } from "lucide-react";
 import { IMG } from "../data/translations.js";
 import { SafeImg } from "../components/Shared.jsx";
 import PageHeader from "../components/PageHeader.jsx";
@@ -8,7 +8,7 @@ import PageHeader from "../components/PageHeader.jsx";
 export default function Services() {
   const { t, isRtl } = useOutletContext();
   const Arrow = isRtl ? ArrowLeft : ArrowRight;
-  const icons = [Truck, Hammer, Construction, Building2, Hammer, Construction];
+  const icons = [Truck, Hammer, Construction, Hammer, Hammer, Construction];
   return (
     <>
       <PageHeader title={t.services.pageTitle} subtitle={t.services.pageSubtitle} tag={t.services.tag} bgImage={IMG.bulldozer} />
