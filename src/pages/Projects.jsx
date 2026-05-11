@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Calendar } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 import { IMG } from "../data/translations.js";
 import { SafeImg } from "../components/Shared.jsx";
 import PageHeader from "../components/PageHeader.jsx";
@@ -30,7 +30,7 @@ export default function Projects() {
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 text-[#d4a737] text-xs font-semibold mb-2">
-                    <Calendar size={12} />
+                    <Star size={12} />
                     <span>{isRtl ? "رؤية 2030" : "Vision 2030"}</span>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
